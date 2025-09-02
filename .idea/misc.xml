@@ -6,6 +6,7 @@
       <list>
         <option value="$PROJECT_DIR$/Fibonacci/pom.xml" />
         <option value="$PROJECT_DIR$/Anagrama/pom.xml" />
+        <option value="$PROJECT_DIR$/MsgLinePatterObserver/pom.xml" />
       </list>
     </option>
   </component>
