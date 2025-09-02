@@ -3,7 +3,7 @@ package org.example;
 import java.util.Arrays;
 
 public class Anagrama {
-    // Implementação atual com complexidade O(n log n)
+
     static boolean isAnagram(String s, String t) {
         if (s.length() != t.length()) return false;
 

@@ -8,3 +8,10 @@ A forma mais eficiente e simples para esta verificação é contar a frequência
 2.Itera uma vez sobre as strings. Para cada caractere, ele in-crementa a contagem para a string s e decrementa para a string t.
 
 3.Se as strings forem anagramas, todas as contagens no array charCounts se anularão e o resultado final para cada posição se-rá 0.4.A verificação final confirma se todas as contagens são zero.
+
+
+Motivo de não utilização da função sort(), Complexidade: O(n log n).
+Optei por esta alternativa mais rápida: usar array de contagem de caracteres → O(n)
+
+
+### Execução com Unit Tests;
