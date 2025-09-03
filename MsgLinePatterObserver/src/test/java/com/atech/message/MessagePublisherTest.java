@@ -43,4 +43,23 @@ public class MessagePublisherTest {
 
         assertNull(subscriber.getReceivedMessage());
     }
+
+    @Test
+    public void testMultipleSubscribersReceiveMessage() {
+        MessagePublisher publisher = new MessagePublisher();
+        MockSubscriber subscriber1 = new MockSubscriber();
+        MockSubscriber subscriber2 = new MockSubscriber();
+
+        publisher.subscribe(subscriber1);
+        publisher.subscribe(subscriber2);
+
+        Message message = new Message("test", "multi-subscriber test");
+        publisher.publishMessage(message);
+
+        assertNotNull(subscriber1.getReceivedMessage(), "Subscriber 1 should have received the message");
+        assertEquals("multi-subscriber test", subscriber1.getReceivedMessage().getContent());
+
+        assertNotNull(subscriber2.getReceivedMessage(), "Subscriber 2 should have received the message");
+        assertEquals("multi-subscriber test", subscriber2.getReceivedMessage().getContent());
+    }
 }
